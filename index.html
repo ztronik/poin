@@ -539,6 +539,7 @@
             if (document.getElementById('admin-input-id')) document.getElementById('admin-input-id').value = '';
             if (document.getElementById('admin-input-nominal')) document.getElementById('admin-input-nominal').value = '';
             if (document.getElementById('estimasi-poin-teks')) document.getElementById('estimasi-poin-teks').classList.add('hidden');
+            if (document.getElementById('search-member-list')) document.getElementById('search-member-list').value = '';
             if (document.getElementById('search-riwayat-admin')) document.getElementById('search-riwayat-admin').value = '';
             if (document.getElementById('search-hadiah')) document.getElementById('search-hadiah').value = '';
             if (document.getElementById('search-produk')) document.getElementById('search-produk').value = '';
@@ -571,7 +572,7 @@
             });
             if(menu === 'hadiah') applyFilterSortHadiah();
             if(menu === 'atur-poin') applyFilterSortProduk();
-            if(menu === 'member') { resetFormMember(); fetchDaftarMember(); }
+            if(menu === 'member') { resetFormMember(); document.getElementById('search-member-list').value = ''; fetchDaftarMember(); }
             
             if(menu === 'riwayat-admin') {
                 loadRiwayatAdmin();
